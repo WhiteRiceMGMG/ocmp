@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>GADGET</h1>
+<ul class="article-list">
+{% for article in articles %}
+  <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+{% else %}
+  <li>記事がありません。</li>
+{% endfor %}
+</ul>
+{% endblock %}

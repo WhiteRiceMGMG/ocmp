@@ -1,0 +1,129 @@
+/* Layout basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page wrapper: fixed width 800px, centered */
+.wrapper {
+  width: 800px;
+  border: 1px solid #0d0d0d;
+  margin: 0 auto;
+  font-family: "Meiryo UI", sans-serif;
+  line-height: 1.8;
+  list-style: none;
+}
+
+/* Header: fixed height 150px */
+header {
+  height: 100px;
+  border-bottom: 1px solid #0d0d0d;
+  display: flex;
+  align-items: center;
+  /* padding-left: 20px; */
+  list-style: none;
+}
+
+.main-nav{
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 36px;
+    list-style: none;
+}
+
+
+.main-mav li a{
+    margin-left: 36px;
+}
+/* Make the site title visually simple and readable */
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Content area: main + sidebar (sidebar on the right) */
+.content-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+
+}
+
+.article-list{
+    list-style: none;
+}
+
+.side-nav{
+    list-style: none;
+}
+
+
+/* Main content: approx 650px */
+main {
+  width: 600px;
+  /* padding: 20px; */
+  border-right: 1px solid #0d0d0d;
+}
+
+/* Sidebar: right side, approx 250px */
+.sidebar {
+  width: 200px;
+  border-bottom: 1px solid #0d0d0d;
+  /* padding: 20px; */
+}
+
+/* Footer spacing */
+footer {
+  /* padding 20px; */
+  border-top: 1px solid #0d0d0d;
+  font-size: 0.9rem;
+}
+
+/* Basic typographic elements (no colors specified) */
+a {
+  text-decoration: underline;
+}
+
+ul {
+  /* padding-left: 20px; */
+}
+
+pre {
+  overflow-x: auto;
+  /* padding: 1rem; */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Small screens: allow wrapper to shrink but keep proportions */
+@media (max-width: 1040px) {
+  .wrapper {
+    width: 96%;
+  }
+  main {
+    width: calc(100% - 270px);
+  }
+  .sidebar {
+    width: 250px;
+  }
+}
+
+/* Very small screens: stack sidebar under main */
+@media (max-width: 760px) {
+  .content-area {
+    flex-direction: column;
+  }
+  main {
+    width: 100%;
+    padding: 16px;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 16px;
+  }
+}u
